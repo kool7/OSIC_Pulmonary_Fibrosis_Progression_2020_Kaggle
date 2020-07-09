@@ -1,0 +1,42 @@
+---
+title: "OSCI"
+author: "Kuldeep Singh Chouhan"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    code_folding: hide
+    
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Load Packages
+```{r, message=FALSE, warning=FALSE}
+# libraries
+library(tidyverse)
+```
+
+# Introduction
+
+According to Kaggle description, [Open Source Imaging Consortium (OSIC)](https://www.osicild.org/) is a not-for-profit, co-operative effort between academia, industry and philanthropy. The group enables rapid advances in the fight against Idiopathic Pulmonary Fibrosis (IPF), fibrosing interstitial lung diseases (ILDs), and other respiratory diseases, including emphysematous conditions. Its mission is to bring together radiologists, clinicians and computational scientists from around the world to improve imaging-based treatments.
+
+In this competition, you’ll predict a patient’s severity of decline in lung function based on a CT scan of their lungs. You’ll determine lung function based on output from a spirometer, which measures the volume of air inhaled and exhaled. **The challenge is to use machine learning techniques to make a prediction with the image, metadata, and baseline FVC as input**.
+
+## What is Pulmonary fibrosis?
+
+The word **“pulmonary”** means lung and the word **“fibrosis”** means scar tissue— similar to scars that you may have on your skin from an old injury or surgery. So, in its simplest sense, pulmonary fibrosis (PF) means scarring in the lungs. Over time, the scar tissue can destroy the normal lung and make it hard for oxygen to get into your blood.
+
+Pulmonary fibrosis isn’t just one disease. It is a family of more than 200 different lung diseases that all look very much alike. The PF family of lung diseases falls into an even larger group of diseases called the interstitial lung diseases (also known as ILD), which includes all of the diseases that have inflammation and/or scarring in the lung. Some interstitial lung diseases don’t include scar tissue. When an interstitial lung disease does include scar tissue in the lung, we call it pulmonary fibrosis. For more information you can check [here](https://www.pulmonaryfibrosis.org/life-with-pf/about-pf).
+
+<div 
+    style="background-image: url('https://www.mayoclinic.org/-/media/kcms/gbs/medical-professionals/images/2018/09/11/14/43/anti-fibrotic-therapy-teatment-ibf-concerns-767px.jpg'); 
+    width:767px; 
+    height:535px; 
+    background-position:center;">&nbsp;
+</div>
+
+
+## What we are predicting?
+
