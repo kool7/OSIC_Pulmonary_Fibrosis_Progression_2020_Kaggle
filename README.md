@@ -1,1 +1,1 @@
-# OSIC Pulmonary Fibrosis Progression 2020 (Kaggle)
+# SIIM-ISIC Melanoma Classification 2020 (Kaggle)
